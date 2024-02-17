@@ -1,14 +1,19 @@
-<p style="color: green"><%= notice %></p>
+<div style="text-align: center; padding-top: 100px;">
+  <p style="color: green;"><%= notice %></p>
 
-<h1>Students</h1>
+  <h1>Students</h1>
 
-<div id="students">
-  <% @students.each do |student| %>
-    <%= render student %>
-    <p>
-      <%= link_to "Show this student", student %>
-    </p>
-  <% end %>
+  <div id="students">
+    <% @students.each do |student| %>
+      <div style="margin: 0 auto; width: 33%; margin-bottom: 10px; text-align: center;">
+        <div style="border: 1px solid black; padding: 10px;">
+          <p><strong>Name:</strong> <%= student.name %></p>
+          <p><strong>Student ID:</strong> <%= student.studentId %></p>
+          <p>
+            <%= link_to "Show this student", student %>
+          </p>
+        </div>
+      </div>
+    <% end %>
+  </div>
 </div>
-
-<%= link_to "New student", new_student_path %>

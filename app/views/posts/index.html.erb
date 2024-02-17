@@ -2,17 +2,18 @@
 
 <div style="text-align: center; padding-top:100px;">
   <h1>Forum</h1>
+  <%= link_to "New post", new_post_path, class: "btn btn-primary btn-lg mb-3" %>
+
 
   <div id="posts">
     <% @posts.each do |post| %>
-      <p><strong>Name:</strong> <%= post.student.name %></p>
-      <p><strong>Student ID:</strong> <%= post.student.studentId %></p>
-      <p><strong>Content:</strong> <%= post.content %></p>
-      <p>
-        <%= link_to "Show this post", post %>
-      </p>
+      <div style="border: 1px solid #000; padding: 10px; margin-bottom: 10px; width: 33%; margin: 0 auto;">
+        <p style="font-size: 16px; font-weight: bold;"><%= post.student.name %> (<%= post.student.studentId %>)</p>
+        <p style="margin-top: 5px; text-align: justify;"><%= post.content %></p>
+        <p>
+          <%= link_to "Show this post", post %>
+        </p>
+      </div>
     <% end %>
   </div>
-
-  <%= link_to "New post", new_post_path %>
 </div>
