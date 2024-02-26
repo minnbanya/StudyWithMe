@@ -1,19 +1,19 @@
-<p style="color: green"><%= notice %></p>
+<div style="text-align: center; padding-top: 100px;">
+  <p style="color: green"><%= notice %></p>
 
-<h1>Admins</h1>
+  <h1>Admins</h1>
 
-<div id="admins">
-  <% @admins.each do |admin| %>
-    <div style="margin: 0 auto; width: 33%; margin-bottom: 10px; text-align: center;">
-      <div style="border: 1px solid black; padding: 10px;">
-        <p><strong>Name:</strong> <%= admin.name %></p>
-        <p><strong>Admin ID:</strong> <%= admin.adminId %></p>
-        <p>
-          <%= link_to "Show this admin", admin %>
-        </p>
+  <div id="admins">
+    <% @admins.each do |admin| %>
+      <div style="margin: 0 auto; width: 33%; margin-bottom: 10px; text-align: center;">
+        <div style="border: 1px solid black; padding: 10px;">
+          <p><strong>Name:</strong> <%= admin.name %></p>
+          <p><strong>Admin ID:</strong> <%= admin.adminId %></p>
+          <p>
+            <%= link_to "Show this admin", admin %>
+          </p>
+        </div>
       </div>
-    </div>
-  <% end %>
+    <% end %>
+  </div>
 </div>
-
-<%= link_to "New admin", new_admin_path %>
