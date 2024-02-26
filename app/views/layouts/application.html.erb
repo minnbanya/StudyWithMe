@@ -46,13 +46,25 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <%= link_to "Register", register_path, class: "nav-link" %>
-            </li>
-            <li class="nav-item">
               <%= link_to "Forum", forum_path, class: "nav-link" %>
             </li>
             <li class="nav-item">
+              <%= link_to "Register Student", registerstudent_path, class: "nav-link" %>
+            </li>
+            <li class="nav-item">
               <%= link_to "Students", students_path, class: "nav-link" %>
+            </li>
+            <li class="nav-item">
+              <%= link_to "Register Mentor", registermentor_path, class: "nav-link" %>
+            </li>
+            <li class="nav-item">
+              <%= link_to "Mentors", mentors_path, class: "nav-link" %>
+            </li>
+            <li class="nav-item">
+              <%= link_to "Register Admin", registeradmin_path, class: "nav-link" %>
+            </li>
+            <li class="nav-item">
+              <%= link_to "Admins", admins_path, class: "nav-link" %>
             </li>
           </ul>
         </div>
